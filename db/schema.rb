@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_08_09_134130) do
+ActiveRecord::Schema.define(version: 2018_08_21_135300) do
 
   create_table "daily_assortments", force: :cascade do |t|
     t.date "assortment_start_date"
@@ -27,6 +27,16 @@ ActiveRecord::Schema.define(version: 2018_08_09_134130) do
     t.integer "sub_category_id"
     t.boolean "is_article_without_price"
     t.boolean "is_orderable_and_loadable"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "stores", force: :cascade do |t|
+    t.integer "cdc"
+    t.string "insegna"
+    t.string "insegna_new"
+    t.string "pdv"
+    t.string "regione"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
